@@ -1,0 +1,58 @@
+<html ng-app="vm.utils.placeholderPolyfillDemo">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        .vm-utils-placeholder-polyfill {
+            color: #999;
+        }
+    </style>
+    <title>Placeholder polyfill demo</title>
+</head>
+
+<body class="container">
+
+<div ng-controller="demoCtrl">
+    <h1>Angular placeholder polyfill examples</h1>
+
+    <div class="alert alert-info" ng-if="!isPolyfillNeeded">
+        <p>You are using a browser that already supports placeholders, so the polyfill is not needed here.</p>
+        <p>Load this page in IE9 or another older browser if you want to try this out</p>
+    </div>
+
+    <h3>With default bootstrap form</h3>
+    <form class="form" action="/test" method="post">
+        <div class="form-group">
+            <label for="test1">This is with a plain old placeholder</label>
+            <input ng-model="testVal1" class="form-control" type="text" id="test1" name="test1" size="50" placeholder="Statically set">
+        </div>
+        <div class="form-group">
+            <label for="test2">Test with ng-attr-placeholder and dynamic value</label>
+            <input ng-model="testVal2" id="test2" name="test2" size="50" type="text" class="form-control" ng-attr-placeholder="{{test1}}"/>
+        </div>
+        <div class="form-group">
+            <label for="test3">Test with pre populated ng-model value</label>
+            <input ng-model="testVal3" id="test3" name="test3" size="50" type="text" class="form-control" ng-attr-placeholder="ng-attr-paceholder set statically"/>
+        </div>
+
+        <div class="form-group">
+            <label for="test-password">A password field</label>
+            <input ng-model="modelPassword" class="form-control" type="password" id="test-password" name="password" size="50" placeholder="Works on password type">
+        </div>
+
+        <div class="form-group">
+            <label for="test4">On a textarea</label>
+            <textarea class="form-control" name="test4" id="test4" cols="30" rows="10" placeholder="Test here"></textarea>
+        </div>
+    </form>
+
+    <label for="test-plain">An unstyled one outside a form</label>
+    <input type="text" id="test-plain" placeholder="Just the plain case">
+</div>
+
+
+</body>
+</html>
+
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../src/placeholder-polyfill.js"></script>
+<script src="demo.js"></script>

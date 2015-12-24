@@ -1,0 +1,26 @@
+{
+  "name": "vm.placeholder.polyfill",
+  "version": "1.0.0",
+  "description": "A polyfill for the HTML 5 placeholder attribute",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "devDependencies": {
+    "angular-mocks": "^1.4.8",
+    "bower": "^1.3.1",
+    "gulp": "^3.9.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "~0.12",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-coverage": "^0.5.3",
+    "karma-jasmine": "^0.3.5"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js  --single-run",
+    "build": "copyfiles src/*.js dist/"
+  },
+  "dependencies": {
+    "angular": "^1.4.8"
+  }
+}
