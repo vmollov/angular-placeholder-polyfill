@@ -6,7 +6,7 @@ module.exports = function (config) {
         files: [
             'node_modules/angular/angular.js',
             'node_modules/angular-mocks/angular-mocks.js',
-            'src/*.js',
+            'dist/*.min.js',
             'test/**/*.spec.js'
         ],
 
@@ -21,12 +21,9 @@ module.exports = function (config) {
         browsers: ['Chrome'],
 
         plugins: [
-            'karma-phantomjs-launcher',
             'karma-chrome-launcher',
-            'karma-firefox-launcher',
             'karma-coverage',
-            'karma-jasmine',
-            'karma-junit-reporter'
+            'karma-jasmine'
         ]
 
     });

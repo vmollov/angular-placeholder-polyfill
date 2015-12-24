@@ -17,6 +17,7 @@
   },
   "scripts": {
     "pretest": "npm install",
+    "postinstall": "npm run build",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js  --single-run",
     "copy": "copyfiles -u 1 src/*.js dist/",
