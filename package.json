@@ -18,8 +18,7 @@
   "scripts": {
     "pretest": "npm install",
     "postinstall": "npm run build",
-    "test": "karma start karma.conf.js",
-    "test-single-run": "karma start karma.conf.js  --single-run",
+    "test": "karma start karma.conf.js  --single-run",
     "copy": "copyfiles -u 1 src/*.js dist/",
     "uglify": "uglifyjs src/*.js --source-map dist/vmUtils.min.js.map -o dist/vmUtils.min.js",
     "build": "npm run copy && npm run uglify"
