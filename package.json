@@ -2,8 +2,7 @@
   "name": "vm.placeholder.polyfill",
   "version": "1.0.0",
   "description": "A polyfill for the HTML 5 placeholder attribute",
-  "repository": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "repository": "https://github.com/vmollov/angular-placeholder-polyfill.git",
   "devDependencies": {
     "angular-mocks": "^1.4.8",
     "copyfiles": "0.2.1",
